@@ -54,7 +54,7 @@ checkAge2(61);
 const checkAge3 = function (age) {
     let age_2 = 18;
     let age_3 = 60;
-    if (typeof age !== 'number' && isNaN(age = Number(age))) {
+    if (typeof age !== 'number' && isNaN(age = parseInt(age))) {
         console.error("Invalid variable type");
         return;
     }
@@ -74,7 +74,11 @@ checkAge3("12");
 checkAge3("test18");
 checkAge3(18);
 checkAge3(61);
-checkAge3("Test")
+checkAge3("Test");
+checkAge3("");
+checkAge3(true);
+checkAge3(undefined);
+checkAge3(null);
 
 // 4***:
 // Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
@@ -83,7 +87,7 @@ let inputAge = prompt("Enter your age");
 const checkAge4 = function (age) {
     let age_2 = 18;
     let age_3 = 60;
-    if (typeof inputAge !== 'number' && isNaN(inputAge = Number(inputAge))) {
+    if (typeof inputAge !== 'number' && isNaN(age = parseInt(age))) {
         alert("Invalid variable type");
         return;
     }
