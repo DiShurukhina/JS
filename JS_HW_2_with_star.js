@@ -32,12 +32,14 @@ for (var i = 0; i <=5; i++){
 // e.g. function printSmile(stroka, numberOfRows)
 
 function printSmile(stroka, numberOfRows) {
+    stroka = stroka.toString()
     for (var i = 0; i <=numberOfRows; i++){
         console.log(stroka.repeat(i))
     }
 }
 
-printSmile("ololo", 10) 
+printSmile("ololo", 10);
+printSmile(10, 10);
 
 // 3**.  Написать функцию, которая принимает на вход слово. Задача функции посчитать и вывести в консоль, сколько в слове гласных, и сколько согласных букв.
 // e.g. function getWordStructure(word)
@@ -73,9 +75,10 @@ inputWords ('тетрагидроканнабинол')
 
 function isPalindrom(pal){
     pal = ('' + pal).toLowerCase();
-    pal = pal.replace(/[^a-zа-яё]/gi, '');
+    pal = pal.replace(/[^a-zа-яё0-9]/gi, '');
     let result = pal.split('').reverse().join('') == pal;
     console.log ('this is ' + (result ? '' : 'not ') + 'palindrome')
 }
 
 isPalindrom('Мастер жрет сам');
+isPalindrom('abba2');
